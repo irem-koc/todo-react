@@ -9,8 +9,8 @@ export default function TodoItem(props) {
     <div className={todo.isCompleted ? "todo-row complete": "todo-row"}>
       {todo.text}
       <div className="iconsContainer">
-        <RiCloseCircleLine size={20} style={{marginRight:5}} onClick={() => props.deleteTodo(todo.id)}/>
-        <AiOutlineCheckCircle size={20} onClick={() => props.completeTodo(todo.id)}/> 
+        <RiCloseCircleLine size={20} style={{marginRight:5}} onClick={() => deleteTodo(todo.id)}/>
+        <AiOutlineCheckCircle size={20} onClick={() => completeTodo(todo.id)}/> 
       </div>
     </div>
   )

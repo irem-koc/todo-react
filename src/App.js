@@ -6,7 +6,6 @@ import TodoItem from './components/TodoItem';
 function App() {
   const [todos, setTodos] = useState([])
   let id = 1;
-  let count = 0;
   const addTodo = (text) => {
     if(todos.length>0){
       id = todos[0].id +1
@@ -22,9 +21,6 @@ function App() {
     let updatedTodos = todos.map((todo) => {
       if(todo.id===id) {
         todo.isCompleted= !todo.isCompleted
-      }
-      if(!todo.isCompleted){
-        count+=1;
       }
       return todo;
     })
